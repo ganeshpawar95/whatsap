@@ -2,8 +2,14 @@ import { Button, TouchableOpacity, StyleSheet, Text } from "react-native";
 
 export default function BoxButton(props) {
   return (
-    <TouchableOpacity style={styles.buttonStyle} onPress={props.onPress}>
-      <Text style={styles.buttonTextStyle}> {props.title}</Text>
+    <TouchableOpacity
+      style={[styles.buttonStyle, props.styles]}
+      onPress={props.onPress}
+    >
+      <Text style={[styles.buttonTextStyle, props.tileStyle]}>
+        {" "}
+        {props.title}
+      </Text>
     </TouchableOpacity>
   );
 }

@@ -3,6 +3,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import StartScreen from "../screens/StartScreen";
 import WelComeScreen from "../screens/WelcomeScreen";
 import RegisterScreen from "../screens/RegisterScreen";
+import VerifyOtpScreen from "../screens/VerifyOtpScreen";
+import HomeScreen from "../screens/HomeScreen";
 const Stack = createStackNavigator();
 
 export default function MainRoute() {
@@ -30,6 +32,30 @@ export default function MainRoute() {
             headerShown: false,
           }}
           component={RegisterScreen}
+        />
+
+        <Stack.Screen
+          name="otp-verify"
+          options={{
+            title: "Enter OTP Code",
+            headerShown: true,
+            headerBackTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+          component={VerifyOtpScreen}
+        />
+
+        <Stack.Screen
+          name="home"
+          options={{
+            title: "Enter OTP Code",
+            headerShown: false,
+            headerBackTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+          component={HomeScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

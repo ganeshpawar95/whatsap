@@ -5,8 +5,14 @@ import { StyleSheet, Text, View } from "react-native";
 import StartScreens from "./src/screens/StartScreen";
 import MainRoute from "./src/navigation/MainRoute";
 
+import { NativeBaseProvider, Box } from "native-base";
+
 export default function App() {
-  return <MainRoute />;
+  return (
+    <NativeBaseProvider>
+      <MainRoute />
+    </NativeBaseProvider>
+  );
 }
 
 const styles = StyleSheet.create({
