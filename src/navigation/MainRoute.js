@@ -4,7 +4,8 @@ import StartScreen from "../screens/StartScreen";
 import WelComeScreen from "../screens/WelcomeScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import VerifyOtpScreen from "../screens/VerifyOtpScreen";
-import HomeScreen from "../screens/HomeScreen";
+import TopTabs from "./TopTab";
+import HomeScreenHeader from "../compoments/HomeScreenHeader";
 const Stack = createStackNavigator();
 
 export default function MainRoute() {
@@ -50,12 +51,10 @@ export default function MainRoute() {
           name="home"
           options={{
             title: "Enter OTP Code",
-            headerShown: false,
-            headerBackTitleStyle: {
-              fontWeight: "bold",
-            },
+            headerShown: true,
+            header: () => <HomeScreenHeader />,
           }}
-          component={HomeScreen}
+          component={TopTabs}
         />
       </Stack.Navigator>
     </NavigationContainer>
