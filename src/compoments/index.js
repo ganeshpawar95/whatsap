@@ -2,4 +2,5 @@ import TitleTop from "./TitleTop";
 import BoxButton from "./BoxButton";
 import SelectBox from "./SelectBox";
 import LoadingModal from "./LoadingModal";
-export { TitleTop, BoxButton, SelectBox, LoadingModal };
+import ChatCard from "./ChatCard";
+export { TitleTop, BoxButton, SelectBox, LoadingModal, ChatCard };
